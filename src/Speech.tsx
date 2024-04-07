@@ -17,7 +17,7 @@ const Speech = () => {
 		<div className='container'>
 			<div className='row'>
 				<div className='column'>
-					<label>Silence sensetivity</label>
+					<label>Silence Sensetivity</label>
 				</div>
 				<div className='column'>
 					<label className='float-right'>{secondsToMinutesAndSeconds(parseInt(speechSensetivity))}</label>
@@ -36,7 +36,7 @@ const Speech = () => {
 			</div>
 			<div className='row'>
 				<div className='column'>
-					<label>Speech timeout</label>
+					<label>Speech Timeout</label>
 				</div>
 				<div className='column'>
 					<label className='float-right'>{secondsToMinutesAndSeconds(parseInt(speechTimeout))}</label>

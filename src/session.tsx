@@ -1,6 +1,13 @@
 import {useState, createContext} from 'react'
 
-type SessionKeys = 'error' | 'audioDevice' | 'audioThreshold' | 'speechTimeout' | 'speechSensetivity' | 'speechSilence'
+type SessionKeys =
+	| 'error'
+	| 'audioDevice'
+	| 'audioThreshold'
+	| 'speechTimeout'
+	| 'speechSensetivity'
+	| 'speechSilence'
+	| 'twitchChannel'
 type SessionTypes = 'localStorage' | 'sessionStorage'
 
 const Session = {
@@ -32,7 +39,9 @@ export const Context = createContext({
 	speechSilence: '0',
 	setSpeechSilence: (_: string) => {},
 	error: '',
-	setError: (_: string) => {}
+	setError: (_: string) => {},
+	twitchChannel: '',
+	setTwitchChannel: (_: string) => {}
 })
 
 const SessionContext: React.FC<{children: React.ReactNode}> = ({children}) => {
@@ -47,6 +56,9 @@ const SessionContext: React.FC<{children: React.ReactNode}> = ({children}) => {
 
 	const [speechSensetivity, setSpeechSensetivityState] = useState<string>(Session.get('speechSensetivity') || '2')
 	const setSpeechSensetivity = Session.setUpdate('speechSensetivity', setSpeechSensetivityState)
+
+	const [twitchChannel, setTwitchChannelState] = useState<string>(Session.get('twitchChannel') || '')
+	const setTwitchChannel = Session.setUpdate('twitchChannel', setTwitchChannelState)
 
 	const [speechSilence, setSpeechSilence] = useState<string>(Session.get('speechSilence') || '0')
 	const [error, setError] = useState<string>(Session.get('error') || '')
@@ -64,6 +76,8 @@ const SessionContext: React.FC<{children: React.ReactNode}> = ({children}) => {
 				setSpeechSensetivity,
 				speechSilence,
 				setSpeechSilence,
+				twitchChannel,
+				setTwitchChannel,
 				error,
 				setError
 			}}

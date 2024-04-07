@@ -5,6 +5,7 @@ import AudioDeviceAnalyser from './AudioDeviceAnalyser'
 import Speech from './Speech'
 import Errors from './Errors'
 import Footer from './Footer'
+import TwitchChat from './TwitchChat'
 
 const App = () => (
 	<SessionContext>
@@ -12,6 +13,7 @@ const App = () => (
 		<AudioDeviceAnalyser />
 		<Speech />
 		<Errors />
+		<TwitchChat />
 		<Footer />
 	</SessionContext>
 )
