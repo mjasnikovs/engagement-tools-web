@@ -10,7 +10,7 @@ const HyperLinks = () => (
 				</button>
 				<button
 					className='button button-clear float-right'
-					onClick={() => window.open('https://github.com/mjasnikovs/engagement-tools', '_blank')}
+					onClick={() => window.open('https://github.com/mjasnikovs/engagement-tools-web', '_blank')}
 				>
 					github
 				</button>
