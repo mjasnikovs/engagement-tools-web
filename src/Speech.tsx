@@ -10,12 +10,11 @@ const secondsToMinutesAndSeconds = (seconds: number): string => {
 }
 
 const Speech = () => {
-	const {speechTimeout, setSpeechTimeout, speechSensetivity, setSpeechSensetivity, speechSilence} =
-		useContext(Context)
+	const {speechTimeout, setSpeechTimeout, speechSilence} = useContext(Context)
 
 	return (
 		<div className='container'>
-			<div className='row'>
+			{/*<div className='row'>
 				<div className='column'>
 					<label>Silence Sensetivity</label>
 				</div>
@@ -33,11 +32,9 @@ const Speech = () => {
 						max='10'
 					/>
 				</div>
-			</div>
+			</div>*/}
 			<div className='row'>
-				<div className='column'>
-					<label>Speech Timeout</label>
-				</div>
+				<div className='column'>Speech Timeout</div>
 				<div className='column'>
 					<label className='float-right'>{secondsToMinutesAndSeconds(parseInt(speechTimeout))}</label>
 				</div>
@@ -54,9 +51,7 @@ const Speech = () => {
 				</div>
 			</div>
 			<div className='row'>
-				<div className='column'>
-					<label>Silence</label>
-				</div>
+				<div className='column'>Silence</div>
 				<div className='column'>
 					<label className='float-right'>{secondsToMinutesAndSeconds(parseInt(speechSilence))}</label>
 				</div>

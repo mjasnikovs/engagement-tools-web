@@ -90,8 +90,16 @@ const AudioDeviceAnalyser = () => {
 		<div className='container'>
 			<div className='row'>
 				<div className='column'>
-					<label>Audio Threshold</label>
+					<meter
+						className={audioPeak > parseInt(audioThreshold) ? 'active' : 'disabled'}
+						min='0'
+						max='100'
+						value={audioPeak.toFixed(2)}
+					/>
 				</div>
+			</div>
+			<div className='row'>
+				<div className='column'>Audio Threshold</div>
 				<div className='column'>
 					<label className='float-right'>{audioThreshold}</label>
 				</div>
@@ -104,24 +112,6 @@ const AudioDeviceAnalyser = () => {
 						type='range'
 						min='0'
 						max='100'
-					/>
-				</div>
-			</div>
-			<div className='row'>
-				<div className='column'>
-					<label>Audio Peak</label>
-				</div>
-				<div className='column'>
-					<label className='float-right'>{audioPeak.toFixed(0)}</label>
-				</div>
-			</div>
-			<div className='row'>
-				<div className='column'>
-					<meter
-						className={audioPeak > parseInt(audioThreshold) ? 'active' : 'disabled'}
-						min='0'
-						max='100'
-						value={audioPeak.toFixed(2)}
 					/>
 				</div>
 			</div>
