@@ -1,10 +1,12 @@
 # Engagement-Tools
 
-Test at: [HERE](https://ceroklis.lv/)
+Test Engagement-Tools: [HERE](https://ceroklis.lv/)
 
-This app is designed to help livestreamers engage better with their audience by detecting periods of silence and warning the user to speak up!
+Engagement-Tools is designed to enhance interaction during live streams.
 
-To use this app, simply start your livestream and launch the Engagement-Tools. The app will run in the background and monitor your audio input. If the app detects a period of silence for an extended period of time, it will issue a warning to the user.
+It actively detects periods of silence and prompts users to engage, ensuring a lively and engaging atmosphere.
+
+Additionally, it monitors chat activity, measuring messages per minute, and automatically lists new chat users for personalized greetings.
 
 Thank you for using the Engagement-Tools, and happy livestreaming!
 
@@ -12,8 +14,6 @@ Thank you for using the Engagement-Tools, and happy livestreaming!
 
 ## Settings
 **Audio Threshold:** This setting refers to the minimum volume level that the app will recognize as speech. You can adjust this setting to make the app more or less sensitive to speech.
-
-**Audio Peak:** This setting allows the user to monitor the maximum volume level of their audio input.
 
 **Silence sensitivity:** This setting determines how sensitive the app is to periods of silence. The user can adjust this value to make the app more or less sensitive to silence. The larger the value, the longer you have to talk to reset the silence.
 
