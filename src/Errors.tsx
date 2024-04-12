@@ -14,7 +14,7 @@ const Errors = () => {
 						To fully utilize the features of this webpage, please grant microphone access. Unlocking your
 						microphone will enable you to engage with the app's audio functionalities seamlessly.
 					</p>
-					<img src='/microphoneerror.png' alt='microphone error' />
+					<img src='./microphoneerror.png' alt='microphone error' />
 					<p>{error}</p>
 					<input onClick={() => setError('')} className='button button-clear' type='button' value='Clear' />
 				</blockquote>
