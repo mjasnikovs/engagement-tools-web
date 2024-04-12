@@ -1,4 +1,4 @@
-import {FacebookShare, TwitterShare, LinkedinShare, TelegramShare} from 'react-share-kit'
+import {FacebookShare, TwitterShare, LinkedinShare, TelegramShare, WhatsappShare} from 'react-share-kit'
 
 const props = {
 	url: 'https://egtools.app',
@@ -17,6 +17,7 @@ const Footer = () => (
 					<TwitterShare {...props} />
 					<LinkedinShare {...props} />
 					<TelegramShare {...props} />
+					<WhatsappShare {...props} />
 				</div>
 			</div>
 		</div>
