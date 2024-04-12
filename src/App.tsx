@@ -6,6 +6,7 @@ import AudioDeviceAnalyser from './AudioDeviceAnalyser'
 import Speech from './Speech'
 import Errors from './Errors'
 import TwitchChat from './TwitchChat'
+import Footer from './Footer'
 
 const App = () => (
 	<SessionContext>
@@ -18,6 +19,7 @@ const App = () => (
 			<hr />
 		</div>
 		<TwitchChat />
+		<Footer />
 	</SessionContext>
 )
 
