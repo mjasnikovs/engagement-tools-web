@@ -30,9 +30,9 @@ const Session = {
 export const Context = createContext({
 	audioDevice: '',
 	setAudioDevice: (_: string) => {},
-	audioThreshold: '5',
+	audioThreshold: '20',
 	setAudioThreshold: (_: string) => {},
-	speechTimeout: '15',
+	speechTimeout: '20',
 	setSpeechTimeout: (_: string) => {},
 	speechSensetivity: '2',
 	setSpeechSensetivity: (_: string) => {},
