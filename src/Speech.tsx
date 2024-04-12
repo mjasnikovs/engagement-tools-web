@@ -13,7 +13,7 @@ const Speech = () => {
 	const {speechTimeout, setSpeechTimeout, speechSilence} = useContext(Context)
 
 	return (
-		<div className='container'>
+		<>
 			{/*<div className='row'>
 				<div className='column'>
 					<label>Silence Sensetivity</label>
@@ -66,7 +66,7 @@ const Speech = () => {
 					/>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

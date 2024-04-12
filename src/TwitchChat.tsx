@@ -116,44 +116,37 @@ const TwitchChat = () => {
 	}, [])
 
 	return (
-		<div className='container'>
-			<div className='row'>
-				<div className='column'>
-					<h3>Twitch Channel</h3>
-				</div>
+		<div className='row'>
+			<div className='column'>
+				<input
+					type='text'
+					placeholder='Enter twitch channel name'
+					id='nameField'
+					value={twitchChannel}
+					onChange={e => setTwitchChannel(e.target.value)}
+				/>
+				<input
+					className='button-primary button-outline'
+					disabled={!twitchChannel}
+					type='button'
+					value={buttonText(connected)}
+					onClick={connectTwich}
+				/>
+				<label title='Messages per minute'>MPM</label>
+				<canvas ref={canvasRef} width={240} height={145} />
 			</div>
-			<div className='row'>
-				<div className='column'>
-					<input
-						type='text'
-						placeholder='lielaiswuu...'
-						id='nameField'
-						value={twitchChannel}
-						onChange={e => setTwitchChannel(e.target.value)}
-					/>
-					<input
-						className='button-primary'
-						disabled={!twitchChannel}
-						type='button'
-						value={buttonText(connected)}
-						onClick={connectTwich}
-					/>
-					<label style={{fontWeight: 500}}>msg/min</label>
-					<canvas ref={canvasRef} width={240} height={145} />
-				</div>
-				<div className='column'>
-					<table>
-						<tbody>
-							{latestTwitchUsers.map((user, i) => (
-								<tr key={i}>
-									<td className={i === 4 ? 'no-border' : ''}>
-										<label>{user}</label>
-									</td>
-								</tr>
-							))}
-						</tbody>
-					</table>
-				</div>
+			<div className='column'>
+				<table>
+					<tbody>
+						{latestTwitchUsers.map((user, i) => (
+							<tr key={i}>
+								<td className={i === 4 ? 'no-border' : ''}>
+									<label>{user}</label>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
 			</div>
 		</div>
 	)

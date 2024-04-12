@@ -10,16 +10,17 @@ import Footer from './Footer'
 
 const App = () => (
 	<SessionContext>
-		<Hyperlinks />
-		<AudioDeviceSelector />
-		<AudioDeviceAnalyser />
-		<Speech />
-		<Errors />
 		<div className='container'>
+			<Hyperlinks />
+			<TwitchChat />
 			<hr />
+			<AudioDeviceSelector />
+			<AudioDeviceAnalyser />
+			<Speech />
+			<Errors />
+			<hr />
+			<Footer />
 		</div>
-		<TwitchChat />
-		<Footer />
 	</SessionContext>
 )
 

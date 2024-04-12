@@ -87,7 +87,7 @@ const AudioDeviceAnalyser = () => {
 	}, [audioDevice, setError])
 
 	return (
-		<div className='container'>
+		<>
 			<div className='row'>
 				<div className='column'>
 					<meter
@@ -115,7 +115,7 @@ const AudioDeviceAnalyser = () => {
 					/>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

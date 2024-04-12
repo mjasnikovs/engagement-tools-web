@@ -5,20 +5,32 @@ const props = {
 	title: 'Engagement-Tools: Enhancing Interaction During Live Streams',
 	quote: 'Engagement-Tools: Enhancing Interaction During Live Streams',
 	blankTarget: true,
-	size: 30
+	size: 40
 }
 
 const Footer = () => (
-	<div className='container'>
-		<div className='row'>
-			<div className='column'>
-				<div className='float-right'>
-					<FacebookShare {...props} />
-					<TwitterShare {...props} />
-					<LinkedinShare {...props} />
-					<TelegramShare {...props} />
-					<WhatsappShare {...props} />
-				</div>
+	<div className='row'>
+		<div className='column'>
+			<button
+				className='button button-clear'
+				onClick={() => window.open('https://streamelements.com/lielaiswuu/tip', '_blank')}
+			>
+				tip
+			</button>
+			<button
+				className='button button-clear'
+				onClick={() => window.open('https://github.com/mjasnikovs/engagement-tools-web', '_blank')}
+			>
+				github
+			</button>
+		</div>
+		<div className='column'>
+			<div className='float-right'>
+				<FacebookShare {...props} />
+				<TwitterShare {...props} />
+				<LinkedinShare {...props} />
+				<TelegramShare {...props} />
+				<WhatsappShare {...props} />
 			</div>
 		</div>
 	</div>
