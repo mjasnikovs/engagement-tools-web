@@ -125,15 +125,18 @@ const TwitchChat = () => {
 					value={twitchChannel}
 					onChange={e => setTwitchChannel(e.target.value)}
 				/>
-				<input
+				<button
 					className='button-primary button-outline'
+					style={{width: '100%'}}
 					disabled={!twitchChannel}
 					type='button'
-					value={buttonText(connected)}
 					onClick={connectTwich}
-				/>
-				<label title='Messages per minute'>MPM</label>
-				<canvas ref={canvasRef} width={240} height={145} />
+				>
+					{buttonText(connected)}
+				</button>
+				<div className='canvas-container' title='Messages per minute'>
+					<canvas ref={canvasRef} width={240} height={145} />
+				</div>
 			</div>
 			<div className='column'>
 				<table>
