@@ -139,6 +139,12 @@ const TwitchChat = () => {
 				</div>
 			</div>
 			<div className='column'>
+				{connected === null && (
+					<p>
+						<br />
+						<b className='text-icon'>↜</b> Enter your twitch channel name and click connect! That's it!
+					</p>
+				)}
 				<table>
 					<tbody>
 						{latestTwitchUsers.map((user, i) => (

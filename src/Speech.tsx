@@ -1,5 +1,6 @@
 import {useContext} from 'react'
 import {Context} from './session'
+import Meter from './Meter'
 
 const secondsToMinutesAndSeconds = (seconds: number): string => {
 	const minutes = Math.floor(seconds / 60)
@@ -58,11 +59,10 @@ const Speech = () => {
 			</div>
 			<div className='row'>
 				<div className='column'>
-					<meter
-						className={parseInt(speechTimeout) > parseInt(speechSilence) ? 'disabled' : 'active'}
-						min='0'
-						max='300'
-						value={speechSilence}
+					<Meter
+						active={parseInt(speechTimeout) > parseInt(speechSilence)}
+						max={300}
+						value={Number(speechSilence)}
 					/>
 				</div>
 			</div>

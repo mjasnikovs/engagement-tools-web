@@ -1,5 +1,6 @@
 import {useEffect, useContext, useState} from 'react'
 import {Context} from './session'
+import Meter from './Meter'
 
 let speechTime: number = 0
 
@@ -90,11 +91,11 @@ const AudioDeviceAnalyser = () => {
 		<>
 			<div className='row'>
 				<div className='column'>
-					<meter
-						className={audioPeak > parseInt(audioThreshold) ? 'active' : 'disabled'}
-						min='0'
-						max='100'
-						value={audioPeak.toFixed(2)}
+					<Meter
+						active={audioPeak > parseInt(audioThreshold)}
+						min={0}
+						max={100}
+						value={Number(audioPeak.toFixed(0))}
 					/>
 				</div>
 			</div>

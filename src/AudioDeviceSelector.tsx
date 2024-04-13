@@ -38,7 +38,7 @@ const AudioDeviceSelector = () => {
 	return (
 		<div className='row'>
 			<div className='column'>
-				<h4>Audio Device</h4>
+				<h5>Audio Device</h5>
 				<select onChange={setDefaultAudioDevice} value={audioDevice}>
 					{audioDeviceList.map(device => (
 						<option key={device.deviceId} value={device.deviceId}>
