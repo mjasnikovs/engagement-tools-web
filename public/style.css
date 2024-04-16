@@ -25,6 +25,12 @@ pre {
 	background: #141518;
 }
 
+dialog {
+	background: #141518;
+	border-radius: 8px;
+	z-index: 9999;
+}
+
 .prettyprint {
 	color: #f2f2f2;
 }

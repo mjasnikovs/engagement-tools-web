@@ -8,6 +8,7 @@ type SessionKeys =
 	| 'speechSensetivity'
 	| 'speechSilence'
 	| 'twitchChannel'
+
 type SessionTypes = 'localStorage' | 'sessionStorage'
 
 const Session = {
@@ -32,7 +33,7 @@ export const Context = createContext({
 	setAudioDevice: (_: string) => {},
 	audioThreshold: '20',
 	setAudioThreshold: (_: string) => {},
-	speechTimeout: '20',
+	speechTimeout: '25',
 	setSpeechTimeout: (_: string) => {},
 	speechSensetivity: '2',
 	setSpeechSensetivity: (_: string) => {},
@@ -48,10 +49,10 @@ const SessionContext: React.FC<{children: React.ReactNode}> = ({children}) => {
 	const [audioDevice, setAudioDeviceState] = useState<string>(Session.get('audioDevice') || '')
 	const setAudioDevice = Session.setUpdate('audioDevice', setAudioDeviceState)
 
-	const [audioThreshold, setAudioThresholdState] = useState<string>(Session.get('audioThreshold') || '5')
+	const [audioThreshold, setAudioThresholdState] = useState<string>(Session.get('audioThreshold') || '20')
 	const setAudioThreshold = Session.setUpdate('audioThreshold', setAudioThresholdState)
 
-	const [speechTimeout, setSpeechTimeoutState] = useState<string>(Session.get('speechTimeout') || '15')
+	const [speechTimeout, setSpeechTimeoutState] = useState<string>(Session.get('speechTimeout') || '25')
 	const setSpeechTimeout = Session.setUpdate('speechTimeout', setSpeechTimeoutState)
 
 	const [speechSensetivity, setSpeechSensetivityState] = useState<string>(Session.get('speechSensetivity') || '2')

@@ -11,6 +11,8 @@ let ws: WebSocket
 const twitchUser = new Set()
 const latestTwitchUsers: string[] = []
 const messagesPerMinute: {time: number; count: number}[] = []
+const generateRandomNumber = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min)
+const twitchKey = generateRandomNumber(1000, 9999)
 
 const TwitchChat = () => {
 	const {twitchChannel, setTwitchChannel} = useContext(Context)
@@ -25,7 +27,7 @@ const TwitchChat = () => {
 		ws.onopen = () => {
 			setConnected(true)
 			ws.send('CAP REQ :twitch.tv/tags')
-			ws.send('NICK justinfan9732')
+			ws.send(`NICK justinfan${twitchKey}`)
 			ws.send('PASS oauth:')
 			ws.send(`JOIN #${twitchChannel}`)
 		}
@@ -120,7 +122,7 @@ const TwitchChat = () => {
 			<div className='column'>
 				<input
 					type='text'
-					placeholder='Enter twitch channel name'
+					placeholder='channel name...'
 					id='nameField'
 					value={twitchChannel}
 					onChange={e => setTwitchChannel(e.target.value)}

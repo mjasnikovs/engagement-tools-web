@@ -22,8 +22,10 @@ const AudioDeviceAnalyser = () => {
 		const timeout = setTimeout(() => {
 			if (parseInt(speechSilence) + 1 > parseInt(speechTimeout)) {
 				document.body.classList.add('pulls')
+				document.title = 'Speek Up!'
 			} else {
 				document.body.classList.remove('pulls')
+				document.title = 'egtools.app listening...'
 			}
 			setSpeechSilence(String(parseInt(speechSilence) + 1))
 		}, 1000)
@@ -93,7 +95,6 @@ const AudioDeviceAnalyser = () => {
 				<div className='column'>
 					<Meter
 						active={audioPeak > parseInt(audioThreshold)}
-						min={0}
 						max={100}
 						value={Number(audioPeak.toFixed(0))}
 					/>
