@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 const HyperLinks = () => {
-	const [openDialog, setOpenDialog] = useState(true)
+	const [openDialog, setOpenDialog] = useState(false)
 
 	return (
 		<div className='row'>
