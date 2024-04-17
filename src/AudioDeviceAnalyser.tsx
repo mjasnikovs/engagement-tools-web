@@ -25,7 +25,7 @@ const AudioDeviceAnalyser = () => {
 				document.title = 'Speek Up!'
 			} else {
 				document.body.classList.remove('pulls')
-				document.title = 'egtools.app listening...'
+				document.title = 'egtools'
 			}
 			setSpeechSilence(String(parseInt(speechSilence) + 1))
 		}, 1000)
