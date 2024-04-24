@@ -24,7 +24,7 @@ const HyperLinks = () => {
 										style={{border: 'none'}}
 										width='320'
 										height='569'
-										src='https://www.youtube-nocookie.com/embed/_5vtalwHYrQ?autoplay=1&si=ayCEwvp9ncU9BX7Z&amp;controls=0'
+										src='https://www.youtube-nocookie.com/embed/AGasoMe-RJw?autoplay=1&si=ayCEwvp9ncU9BX7Z&amp;controls=0'
 										title='How it works? 🎬'
 										allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 									/>
